@@ -20,6 +20,7 @@ export default class TableCell extends React.Component {
     column: PropTypes.object,
     expandIcon: PropTypes.node,
     component: PropTypes.any,
+    visible: PropTypes.bool,
   };
 
   handleClick = e => {
@@ -39,6 +40,7 @@ export default class TableCell extends React.Component {
       expandIcon,
       column,
       component: BodyCell,
+      visible,
     } = this.props;
     const { dataIndex, render, className = '' } = column;
 
@@ -90,8 +92,10 @@ export default class TableCell extends React.Component {
       tdProps.style = { textAlign: column.align };
     }
 
+    const cellClassName = className + (visible ? '' : ' hidden');
+
     return (
-      <BodyCell className={className} onClick={this.handleClick} {...tdProps}>
+      <BodyCell className={cellClassName} onClick={this.handleClick} {...tdProps}>
         {indentText}
         {expandIcon}
         {text}

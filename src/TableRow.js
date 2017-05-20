@@ -185,6 +185,7 @@ class TableRow extends React.Component {
       hovered,
       height,
       visible,
+      fixed,
       components,
       hasExpandIcon,
       renderExpandIcon,
@@ -211,9 +212,10 @@ class TableRow extends React.Component {
         column.onCellClick === undefined,
         'column[onCellClick] is deprecated, please use column[onCell] instead.',
       );
-
+      const isCellVisible = fixed || !columns[i].fixed;
       cells.push(
         <TableCell
+          visible={isCellVisible}
           prefixCls={prefixCls}
           record={record}
           indentSize={indentSize}

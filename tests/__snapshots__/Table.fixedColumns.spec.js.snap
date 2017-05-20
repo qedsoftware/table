@@ -43,15 +43,9 @@ exports[`Table.fixedColumns renders correctly 1`] = `
           >
             <tr>
               <th
-                class=""
-              >
-                title1
-              </th>
+                class="" />
               <th
-                class=""
-              >
-                title2
-              </th>
+                class="" />
               <th
                 class=""
               >
@@ -98,10 +92,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 title11
               </th>
               <th
-                class=""
-              >
-                title12
-              </th>
+                class="" />
             </tr>
           </thead>
           <tbody
@@ -111,8 +102,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -120,8 +110,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 123
               </td>
               <td
-                class=""
-              >
+                class=" hidden">
                 xxxxxxxx
               </td>
               <td
@@ -168,8 +157,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 xxxxxxxx
               </td>
               <td
-                class=""
-              >
+                class=" hidden">
                 xxxxxxxx
               </td>
             </tr>
@@ -177,8 +165,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -186,8 +173,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 cdd
               </td>
               <td
-                class=""
-              >
+                class=" hidden">
                 edd12221
               </td>
               <td
@@ -234,8 +220,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 edd12221
               </td>
               <td
-                class=""
-              >
+                class=" hidden">
                 edd12221
               </td>
             </tr>
@@ -243,8 +228,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -252,8 +236,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -284,15 +267,13 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
             <tr
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -300,8 +281,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -332,15 +312,13 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
             <tr
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -348,8 +326,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -380,15 +357,13 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
             <tr
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -396,8 +371,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -428,15 +402,13 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
             <tr
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -444,8 +416,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -476,15 +447,13 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
             <tr
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -492,8 +461,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -524,15 +492,13 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
             <tr
               class="rc-table-row  rc-table-row-level-0"
             >
               <td
-                class=""
-              >
+                class=" hidden">
                 <span
                   class="rc-table-row-indent indent-level-0"
                   style="padding-left:0px"
@@ -540,8 +506,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 133
               </td>
               <td
-                class=""
-              />
+                class=" hidden" />
               <td
                 class=""
               >
@@ -572,8 +537,7 @@ exports[`Table.fixedColumns renders correctly 1`] = `
                 class=""
               />
               <td
-                class=""
-              />
+                class=" hidden" />
             </tr>
           </tbody>
         </table>
