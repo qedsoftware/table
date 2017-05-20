@@ -131,7 +131,7 @@ export default class TableRow extends React.Component {
     const {
       prefixCls, columns, record, visible, index,
       expandIconColumnIndex, expandIconAsCell, expanded, expandRowByClick,
-      expandable, onExpand, needIndentSpaced, indent, indentSize,
+      expandable, fixed, onExpand, needIndentSpaced, indent, indentSize,
     } = this.props;
 
     let { className } = this.props;
@@ -154,6 +154,7 @@ export default class TableRow extends React.Component {
     );
 
     for (let i = 0; i < columns.length; i++) {
+      const isCellVisible = fixed || !columns[i].fixed;
       if (expandIconAsCell && i === 0) {
         cells.push(
           <td
@@ -168,6 +169,7 @@ export default class TableRow extends React.Component {
         ? false : (i === expandIconColumnIndex);
       cells.push(
         <TableCell
+          visible={isCellVisible}
           prefixCls={prefixCls}
           record={record}
           indentSize={indentSize}
