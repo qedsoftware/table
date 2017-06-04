@@ -193,7 +193,7 @@ export default class Table extends React.Component {
 
   getHeader(columns, fixed) {
     const { showHeader, expandIconAsCell, prefixCls } = this.props;
-    const rows = this.getHeaderRows(columns);
+    const rows = this.getHeaderRows(columns, fixed);
 
     if (expandIconAsCell && fixed !== 'right') {
       rows[0].unshift({
@@ -211,11 +211,12 @@ export default class Table extends React.Component {
         prefixCls={prefixCls}
         rows={rows}
         rowStyle={trStyle}
+        fixed={fixed}
       />
     ) : null;
   }
 
-  getHeaderRows(columns, currentRow = 0, rows) {
+  getHeaderRows(columns, fixed = false, currentRow = 0, rows) {
     rows = rows || [];
     rows[currentRow] = rows[currentRow] || [];
 
@@ -225,10 +226,11 @@ export default class Table extends React.Component {
           rows.push([]);
         }
       }
+      const visible = fixed || !column.fixed;
       const cell = {
         key: column.key,
         className: column.className || '',
-        children: column.title,
+        children: visible ? column.title : '',
       };
       if (column.children) {
         this.getHeaderRows(column.children, currentRow + 1, rows);
@@ -361,6 +363,7 @@ export default class Table extends React.Component {
           hoverKey={key}
           ref={rowRef(record, i, indent)}
           store={this.store}
+          fixed={!!fixed}
         />
       );
 
