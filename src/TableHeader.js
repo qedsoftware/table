@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import TableHeaderRow from './TableHeaderRow';
 
-function getHeaderRows(columns, currentRow = 0, rows) {
+function getHeaderRows(columns, fixed = false, currentRow = 0, rows) {
   rows = rows || [];
   rows[currentRow] = rows[currentRow] || [];
 
@@ -12,14 +12,15 @@ function getHeaderRows(columns, currentRow = 0, rows) {
         rows.push([]);
       }
     }
+    const visible = fixed || !column.fixed;
     const cell = {
       key: column.key,
       className: column.className || '',
-      children: column.title,
+      children: visible ? column.title : '',
       column,
     };
     if (column.children) {
-      getHeaderRows(column.children, currentRow + 1, rows);
+      getHeaderRows(column.children, fixed, currentRow + 1, rows);
     }
     if ('colSpan' in column) {
       cell.colSpan = column.colSpan;
@@ -43,7 +44,7 @@ export default function TableHeader(props, { table }) {
     return null;
   }
 
-  const rows = getHeaderRows(columns);
+  const rows = getHeaderRows(columns, fixed);
 
   expander.renderExpandIndentCell(rows, fixed);
 
