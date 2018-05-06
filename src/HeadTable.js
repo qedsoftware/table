@@ -1,11 +1,11 @@
+import { connect } from 'mini-store';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { measureScrollbar } from './utils';
 import BaseTable from './BaseTable';
 
-export default function HeadTable(props, { table }) {
+function HeadTable(props, { table }) {
   const { prefixCls, scroll, showHeader } = table.props;
-  const { columns, fixed, tableClassName, handleBodyScrollLeft, expander } = props;
+  const { columns, fixed, tableClassName, handleBodyScrollLeft, expander, scrollbarWidth } = props;
   const { saveRef } = table;
   let { useFixedHeader } = table.props;
   const headStyle = {};
@@ -13,7 +13,6 @@ export default function HeadTable(props, { table }) {
   if (scroll.y) {
     useFixedHeader = true;
     // Add negative margin bottom for scroll bar overflow bug
-    const scrollbarWidth = measureScrollbar('horizontal');
     if (scrollbarWidth > 0 && !fixed) {
       headStyle.marginBottom = `-${scrollbarWidth}px`;
       headStyle.paddingBottom = '0px';
@@ -55,3 +54,7 @@ HeadTable.propTypes = {
 HeadTable.contextTypes = {
   table: PropTypes.any,
 };
+
+export default connect(
+  (state, props) => ({ ...props, scrollbarWidth: state.scrollbarWidth })
+)(HeadTable)

@@ -1,22 +1,16 @@
 import warning from 'warning';
 
-let scrollbarSize;
-
-// Measure scrollbar width for padding body during modal show/hide
 const scrollbarMeasure = {
   position: 'absolute',
-  top: '-9999px',
-  width: '50px',
-  height: '50px',
+  top: '-99999px',
+  width: '300px',
+  height: '300px',
   overflow: 'scroll',
 };
 
 export function measureScrollbar(direction = 'vertical') {
   if (typeof document === 'undefined' || typeof window === 'undefined') {
     return 0;
-  }
-  if (scrollbarSize) {
-    return scrollbarSize;
   }
   const scrollDiv = document.createElement('div');
   Object.keys(scrollbarMeasure).forEach(scrollProp => {
@@ -31,8 +25,7 @@ export function measureScrollbar(direction = 'vertical') {
   }
 
   document.body.removeChild(scrollDiv);
-  scrollbarSize = size;
-  return scrollbarSize;
+  return size;
 }
 
 export function debounce(func, wait, immediate) {

@@ -6,7 +6,7 @@ import { Provider, create } from 'mini-store';
 import merge from 'lodash/merge';
 import classes from 'component-classes';
 import { polyfill } from 'react-lifecycles-compat';
-import { debounce, warningOnce } from './utils';
+import { debounce, warningOnce, measureScrollbar } from './utils';
 import ColumnManager from './ColumnManager';
 import HeadTable from './HeadTable';
 import BodyTable from './BodyTable';
@@ -114,6 +114,7 @@ class Table extends React.Component {
       currentHoverKey: null,
       fixedColumnsHeadRowsHeight: [],
       fixedColumnsBodyRowsHeight: [],
+      scrollbarWidth: measureScrollbar('horizontal'),
     });
 
     this.setScrollPosition('left');
@@ -226,6 +227,9 @@ class Table extends React.Component {
   handleWindowResize = () => {
     this.syncFixedTableRowHeight();
     this.setScrollPositionClassName();
+    this.store.setState({
+      scrollbarWidth: measureScrollbar('horizontal'),
+    });
   };
 
   syncFixedTableRowHeight = () => {
