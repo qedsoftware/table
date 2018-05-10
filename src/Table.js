@@ -291,8 +291,10 @@ class Table extends React.Component {
     if (target.scrollLeft !== this.lastScrollLeft && scroll.x) {
       if (target === bodyTable && headTable) {
         headTable.scrollLeft = target.scrollLeft;
+        setTimeout(() => headTable.scrollLeft = target.scrollLeft, 100);
       } else if (target === headTable && bodyTable) {
         bodyTable.scrollLeft = target.scrollLeft;
+        setTimeout(() => bodyTable.scrollLeft = target.scrollLeft, 100);
       }
       this.setScrollPositionClassName();
     }
